@@ -14,7 +14,7 @@ spec:
         spec:
           containers:
           - name: healthcheck
-            image: ikulyk404/busyboxplus:curl
+            image: busyboxplus:curl
             resources:
               requests:
                 cpu: "50m"
@@ -25,5 +25,5 @@ spec:
             command: ["/bin/sh"]
             args:
             - "-c"
-            - "curl -s http://todoapp-clusterip.todoapp.svc.cluster.local/api/health"
+            - "curl -s curl -s http://todoapp/api/health"
           restartPolicy: OnFailure

@@ -38,6 +38,9 @@ View logs of a job pod:
 ```
 kubectl logs <job-pod-name> -n mateapp
 ```
+```
+kubectl describe cronjob todoapp-healthcheck -n mateapp
+```
 You should see curl output hitting /api/health endpoint.
 
 Notes
