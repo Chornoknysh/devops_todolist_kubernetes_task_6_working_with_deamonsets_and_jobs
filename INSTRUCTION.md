@@ -2,7 +2,7 @@
 
 ## 1. Create Namespace
 ```
-kubectl create namespace todoapp
+kubectl create namespace mateapp
 ```
 ## 2. Apply Manifests
 
@@ -13,11 +13,11 @@ kubectl apply -f .infrastructure/cronjob.yml
 ## 3. Validate DaemonSet
 Check pods:
 ```
-kubectl get pods -n todoapp -l app=busybox-curl
+kubectl get pods -n mateapp -l app=busybox-curl
 ```
 View logs for a pod:
 ```
-kubectl logs <pod-name> -n todoapp
+kubectl logs <pod-name> -n mateapp
 ```
 You should see curl outputs every 5 seconds hitting the todoapp service.
 
@@ -26,17 +26,17 @@ Check CronJobs:
 
 
 ```
-kubectl get cronjob -n todoapp
+kubectl get cronjob -n mateapp
 ```
 Check recent Jobs:
 
 ```
-kubectl get jobs -n todoapp
+kubectl get jobs -n mateapp
 ```
 View logs of a job pod:
 
 ```
-kubectl logs <job-pod-name> -n todoapp
+kubectl logs <job-pod-name> -n mateapp
 ```
 You should see curl output hitting /api/health endpoint.
 
